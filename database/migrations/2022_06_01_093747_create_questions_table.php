@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('body');
-            $table->unsignedInteger('views')->default(0);
-            $table->unsignedInteger('asnwers')->default(0);
+            $table->unsignedBigInteger('views')->default(0);
+            $table->unsignedBigInteger('answers')->default(0);
             $table->integer('votes')->default(0);
-            $table->unsignedInteger('best_answer_id')->nullable();
-            $table->unsignedInteger('users_id');
+            $table->unsignedBigInteger('best_answer_id')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                     ->references('id')
                     ->on('users')
