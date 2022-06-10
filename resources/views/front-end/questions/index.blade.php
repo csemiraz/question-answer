@@ -35,6 +35,7 @@
                     <div class="col-md-11">
                         <div class="card-body">
                             <h5 class="card-title"><a href="{{ route('questions.show', $question->id) }}">{{ $question->title }}</a></h5>
+                            <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-outline-success btn-sm float-sm-end">Edit</a>
                             <p>Asked by <a href="#">{{ $question->user->name }}</a>
                                 <small class="text-muted">{{ $question->created_at->diffForHumans() }}</small>  
                             </p>
