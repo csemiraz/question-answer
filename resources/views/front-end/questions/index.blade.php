@@ -6,8 +6,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-            <div class="alert alert-success text-center" role="alert">
-                All Questions
+            <div class="alert alert-secondary text-center" role="alert">
+                <div class="d-flex align-items-center">
+                    <h3>All Questions</h3>
+                    <div class="ms-auto">
+                        <a href="{{ route("questions.create") }}" class="btn btn-outline-secondary">Ask Question</a>
+                    </div>
+                </div>
             </div>
             @foreach($questions as $question)
             <div class="card mb-2">

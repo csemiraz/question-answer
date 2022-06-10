@@ -25,7 +25,8 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        return view('front-end.questions.create');
+
     }
 
     /**
@@ -36,7 +37,10 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
     }
 
     /**
