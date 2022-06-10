@@ -1,0 +1,28 @@
+.counters {
+    margin-right: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+.vote, .answer {
+    width: 60px;
+    height: 60px;
+}
+strong {
+    display: block;
+    font-size: 2em;
+}
+.unanswered {
+    border: none;
+}
+.answered {
+    border: 1px solid green;
+    color: green;
+}
+.answer-accepted {
+    background-color: green;
+    color: white;
+}
+
+.view {
+    margin-top: 10px; 
+}
