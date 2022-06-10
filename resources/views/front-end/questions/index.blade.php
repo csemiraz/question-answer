@@ -14,6 +14,7 @@
                     </div>
                 </div>
             </div>
+            @include('front-end.layouts._message')
             @foreach($questions as $question)
             <div class="card mb-2">
                 <div class="row">
