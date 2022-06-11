@@ -35,7 +35,12 @@
                     <div class="col-md-11">
                         <div class="card-body">
                             <h5 class="card-title"><a href="{{ route('questions.show', $question->id) }}">{{ $question->title }}</a></h5>
-                            <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-outline-success btn-sm float-sm-end">Edit</a>
+                            <form action="{{ route('questions.destroy', $question->id) }}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-sm btn-outline-danger float-end" onclick="return confirm('Are you sure?')">Delete</button>
+                            </form>
+                            <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-outline-success btn-sm float-sm-end me-1">Edit</a>
                             <p>Asked by <a href="#">{{ $question->user->name }}</a>
                                 <small class="text-muted">{{ $question->created_at->diffForHumans() }}</small>  
                             </p>
