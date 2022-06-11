@@ -34,7 +34,7 @@
 
                     <div class="col-md-11">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{{ route('questions.show', $question->id) }}">{{ $question->title }}</a></h5>
+                            <h5 class="card-title"><a href="{{ route('questions.show', $question->slug) }}">{{ $question->title }}</a></h5>
                             <form action="{{ route('questions.destroy', $question->id) }}" method="post">
                                 @method('DELETE')
                                 @csrf

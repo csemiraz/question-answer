@@ -49,10 +49,14 @@ class QuestionController extends Controller
      * @param  \App\Models\Question  $question
      * @return \Illuminate\Http\Response
      */
+
+
     public function show(Question $question)
     {
-        //
+        $question->increment('views');
+        return view('front-end.questions.show', compact('question'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
