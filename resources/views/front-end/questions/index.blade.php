@@ -40,7 +40,10 @@
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-outline-danger float-end" onclick="return confirm('Are you sure?')">Delete</button>
                             </form>
+                            
+                            @if(Auth::id() == $question->user_id)
                             <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-outline-success btn-sm float-sm-end me-1">Edit</a>
+                            @endif
                             <p>Asked by <a href="#">{{ $question->user->name }}</a>
                                 <small class="text-muted">{{ $question->created_at->diffForHumans() }}</small>  
                             </p>
